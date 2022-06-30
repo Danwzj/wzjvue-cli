@@ -1,0 +1,42 @@
+{
+  "name": "wzjvue-cli",
+  "version": "1.0.0",
+  "description": "vue-cli sourceCode by myself",
+  "scripts": {
+    "preinstall": "npx only-allow npm",
+    "prepare": "husky install",
+    "commit-msg": "npm run commitlint",
+    "pre-commit": "",
+    "commit": "cz",
+    "commitlint": "npx commitlint -x @commitlint/config-conventional --edit",
+    "changelog": "conventional-changelog -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danwzj/wzjvue-cli.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "sourceCode"
+  ],
+  "author": "wangzhijie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danwzj/wzjvue-cli/issues"
+  },
+  "homepage": "https://github.com/Danwzj/wzjvue-cli#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-customizable": "^6.7.0",
+    "husky": "^8.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
+}
